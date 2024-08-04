@@ -12,8 +12,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 
 @RestController
-@RequestMapping("/auth")
-@CrossOrigin("*")   //to allow for specific request type. check needy greedy
+@RequestMapping("/api/v1/auth")
+@CrossOrigin("*")
 public class AuthController {
 
     @Autowired
