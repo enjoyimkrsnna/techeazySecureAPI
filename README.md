@@ -185,5 +185,33 @@ cd techeazySecureAPI
     "subjects": ["string"]
   }
   ```
-  
+
+
+## Entity Relationships
+
+- **Student**: Represents a student with fields `name` and `address`. A student can enroll in multiple subjects.
+- **Subject**: Represents a subject with a `name` field.
+
+The relationship between `Student` and `Subject` is many-to-many. This means that a student can be enrolled in multiple subjects, and a subject can have multiple students enrolled.
+
+## Security
+
+### Roles
+
+- **STUDENT**: Basic role with limited access.
+- **ADMIN**: Elevated role with access to all features.
+
+### Authentication
+
+The application uses JWT (JSON Web Token) for authentication. Users must provide valid credentials to receive a token, which must be included in the `Authorization` header for subsequent requests.
+
+## Database
+
+The application uses an in-memory H2 database for development and testing. No additional database setup is required.
+
+## Environment
+
+- Maven project with dependencies managed in `pom.xml`.
+- Compatible with JDK 19+.
+
 
